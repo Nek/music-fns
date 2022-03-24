@@ -4,10 +4,13 @@
   "description": "JavaScript music utility library that contains small music notation related functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint --config ./.eslintrc src",
+    "lint": "eslint --config .eslintrc.js ./src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "tsc": "tsc",
     "build": "babel src --out-dir dist --ignore test.js",
@@ -25,18 +28,17 @@
     "utility",
     "audio"
   ],
-  "author": "",
-  "files": [
-    "dist"
-  ],
+  "author": "Nikita Dudnik aka Nek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madewithlove/music-fns/issues"
+    "url": "https://github.com/Nek/music-fns/issues"
   },
-  "homepage": "https://github.com/madewithlove/music-fns#readme",
+  "homepage": "https://github.com/Nek/music-fns#readme",
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.2",
@@ -46,12 +48,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^8.11.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
     "jest": "^27.5.1",
     "prettier": "^2.6.0",
     "ts-jest": "^27.1.3",

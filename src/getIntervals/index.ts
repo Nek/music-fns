@@ -6,7 +6,6 @@ import intervals from '../constants/Interval'
 import type {
   Direction,
   Interval,
-  Note,
   ScientificNote,
   ScientificNotes,
 } from 'src/types'
@@ -38,7 +37,11 @@ const getInterval = (
     return difference
   }
 
-  return difference + (octave2! - octave1!) * OCTAVE
+  if (typeof octave1 === "undefined" || typeof octave2 === "undefined") {
+      return undefined
+  }
+
+  return difference + (octave2 - octave1) * OCTAVE
 }
 
 const getIntervals = (
@@ -63,7 +66,7 @@ const getIntervals = (
       direction,
     })
 
-    return [...acc, interval]
+    return typeof interval !== "undefined" ? [...acc, interval] : acc
   }, [])
 
   if (fromRoot) {

@@ -1,5 +1,4 @@
 import getChromaticCPosition from '../getChromaticCPosition'
-import interval from '../constants/Interval'
 
 import transferStyle from '../transferStyle'
 import getOctave from '../getOctave'

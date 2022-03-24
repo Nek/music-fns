@@ -1,5 +1,4 @@
 import SCIENTIFIC_NOTE from '../constants/Regex/SCIENTIFIC_NOTE'
-import isNote from '../isNote'
 
 import {
   FLAT_LETTER,
@@ -17,6 +16,7 @@ import type {
   NoteObject,
   ScientificNote,
 } from 'src/types'
+import isNote from '../isNote'
 
 const isFlat = (accidental: string) =>
   [FLAT_LETTER, FLAT_SYMBOL].includes(accidental)
@@ -51,13 +51,11 @@ const noteToObject = (scientificNote: ScientificNote): NoteObject => {
   }
 
   const regexResult = SCIENTIFIC_NOTE.exec(scientificNote)
-  const root = regexResult?.[1]
-  const accidental = regexResult?.[2]
-  const octave = regexResult?.[3]
+  const [, root, accidental, octave] = regexResult ? regexResult : []
 
   return {
-    root: root!.toUpperCase(),
-    ...parseAccidental(accidental!),
+    root: root.toUpperCase(),
+    ...parseAccidental(accidental),
     octave: typeof octave !== 'undefined' ? Number(octave) : undefined,
   }
 }

@@ -25,7 +25,7 @@ const isDiatonic = (scale: Scale, { direction = 1 }: Options = {}) => {
     .map((interval, position) => (isSemitone(interval) ? position : undefined))
     .filter((position) => position !== undefined)
 
-  if (pos2! - pos1! < 2) return false
+  if ( typeof pos1 !== "undefined" && typeof pos2 !== "undefined" && (pos2 - pos1 < 2)) return false
 
   return true
 }
