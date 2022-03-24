@@ -1,133 +1,65 @@
-import CHORD from './constants/Chord'
-import INTERVAL from './constants/Interval'
-import MODE from './constants/Mode'
-import SCALE from './constants/Scale'
-import NOTES from './constants/NOTES'
+export { default as CHORD  } from './constants/Chord'
+export { default as INTERVAL  } from './constants/Interval'
+export { default as MODE  } from './constants/Mode'
+export { default as SCALE  } from './constants/Scale'
+export { default as NOTES  } from './constants/NOTES'
 
-import accidentalToLetter from './accidentalToLetter'
-import accidentalToSymbol from './accidentalToSymbol'
-import areEqual from './areEqual'
-import createChord from './createChord'
-import createMelody from './createMelody'
-import createScale from './createScale'
-import flatToSharp from './flatToSharp'
-import getAccidental from './getAccidental'
-import getChromaticCPosition from './getChromaticCPosition'
-import getDominant from './getDominant'
-import getIntervals from './getIntervals'
-import getLeadingTone from './getLeadingTone'
-import getMediant from './getMediant'
-import getNote from './getNote'
-import getOctave from './getOctave'
-import getRoot from './getRoot'
-import getNoteOnDegree from './getNoteOnDegree'
-import getSubdominant from './getSubdominant'
-import getSubmediant from './getSubmediant'
-import getSupertonic from './getSupertonic'
-import getTonic from './getTonic'
-import hasAccidental from './hasAccidental'
-import hasAccidentalLetter from './hasAccidentalLetter'
-import hasAccidentalSymbol from './hasAccidentalSymbol'
-import hasOctave from './hasOctave'
-import haveSameOctave from './haveSameOctave'
-import isAnhemitonic from './isAnhemitonic'
-import isAscending from './isAscending'
-import isCohemitonic from './isCohemitonic'
-import isDescending from './isDescending'
-import isDiatonic from './isDiatonic'
-import isFifth from './isFifth'
-import isFlat from './isFlat'
-import isHemitonic from './isHemitonic'
-import isHeptatonic from './isHeptatonic'
-import isHexatonic from './isHexatonic'
-import areIntervals from './areIntervals'
-import isMode from './isMode'
-import isNatural from './isNatural'
-import isOctatonic from './isOctatonic'
-import isOctave from './isOctave'
-import isPentatonic from './isPentatonic'
-import isScale from './isScale'
-import hasIntervalAmount from './hasIntervalAmount'
-import isNote from './isNote'
-import areNotes from './areNotes'
-import isSemitone from './isSemitone'
-import isSharp from './isSharp'
-import isTone from './isTone'
-import isTriad from './isTriad'
-import normalize from './normalize'
-import noteToFrequency from './noteToFrequency'
-import noteToMidi from './noteToMidi'
-import noteToObject from './noteToObject'
-import objectToNote from './objectToNote'
-import sharpToFlat from './sharpToFlat'
-import transferAccidental from './transferAccidental'
-import transferStyle from './transferStyle'
-import transpose from './transpose'
-
-export default {
-  CHORD,
-  INTERVAL,
-  MODE,
-  SCALE,
-  NOTES,
-
-  accidentalToLetter,
-  accidentalToSymbol,
-  areEqual,
-  createChord,
-  createMelody,
-  createScale,
-  flatToSharp,
-  getAccidental,
-  getChromaticCPosition,
-  getDominant,
-  getIntervals,
-  getLeadingTone,
-  getMediant,
-  getNote,
-  getOctave,
-  getRoot,
-  getNoteOnDegree,
-  getSubdominant,
-  getSubmediant,
-  getSupertonic,
-  getTonic,
-  hasAccidental,
-  hasAccidentalLetter,
-  hasAccidentalSymbol,
-  hasOctave,
-  haveSameOctave,
-  isAnhemitonic,
-  isAscending,
-  isCohemitonic,
-  isDescending,
-  isDiatonic,
-  isFifth,
-  isFlat,
-  isHemitonic,
-  isHeptatonic,
-  isHexatonic,
-  areIntervals,
-  isMode,
-  isNatural,
-  isOctatonic,
-  isOctave,
-  isPentatonic,
-  isScale,
-  hasIntervalAmount,
-  isNote,
-  areNotes,
-  isSemitone,
-  isSharp,
-  isTone,
-  isTriad,
-  normalize,
-  noteToFrequency,
-  noteToMidi,
-  noteToObject,
-  objectToNote,
-  sharpToFlat,
-  transferAccidental,
-  transferStyle,
-  transpose,
-}
+export { default as accidentalToLetter  } from './accidentalToLetter'
+export { default as accidentalToSymbol  } from './accidentalToSymbol'
+export { default as areEqual  } from './areEqual'
+export { default as createChord  } from './createChord'
+export { default as createMelody  } from './createMelody'
+export { default as createScale  } from './createScale'
+export { default as flatToSharp  } from './flatToSharp'
+export { default as getAccidental  } from './getAccidental'
+export { default as getChromaticCPosition  } from './getChromaticCPosition'
+export { default as getDominant  } from './getDominant'
+export { default as getIntervals  } from './getIntervals'
+export { default as getLeadingTone  } from './getLeadingTone'
+export { default as getMediant  } from './getMediant'
+export { default as getNote  } from './getNote'
+export { default as getOctave  } from './getOctave'
+export { default as getRoot  } from './getRoot'
+export { default as getNoteOnDegree  } from './getNoteOnDegree'
+export { default as getSubdominant  } from './getSubdominant'
+export { default as getSubmediant  } from './getSubmediant'
+export { default as getSupertonic  } from './getSupertonic'
+export { default as getTonic  } from './getTonic'
+export { default as hasAccidental  } from './hasAccidental'
+export { default as hasAccidentalLetter  } from './hasAccidentalLetter'
+export { default as hasAccidentalSymbol  } from './hasAccidentalSymbol'
+export { default as hasOctave  } from './hasOctave'
+export { default as haveSameOctave  } from './haveSameOctave'
+export { default as isAnhemitonic  } from './isAnhemitonic'
+export { default as isAscending  } from './isAscending'
+export { default as isCohemitonic  } from './isCohemitonic'
+export { default as isDescending  } from './isDescending'
+export { default as isDiatonic  } from './isDiatonic'
+export { default as isFifth  } from './isFifth'
+export { default as isFlat  } from './isFlat'
+export { default as isHemitonic  } from './isHemitonic'
+export { default as isHeptatonic  } from './isHeptatonic'
+export { default as isHexatonic  } from './isHexatonic'
+export { default as areIntervals  } from './areIntervals'
+export { default as isMode  } from './isMode'
+export { default as isNatural  } from './isNatural'
+export { default as isOctatonic  } from './isOctatonic'
+export { default as isOctave  } from './isOctave'
+export { default as isPentatonic  } from './isPentatonic'
+export { default as isScale  } from './isScale'
+export { default as hasIntervalAmount  } from './hasIntervalAmount'
+export { default as isNote  } from './isNote'
+export { default as areNotes  } from './areNotes'
+export { default as isSemitone  } from './isSemitone'
+export { default as isSharp  } from './isSharp'
+export { default as isTone  } from './isTone'
+export { default as isTriad  } from './isTriad'
+export { default as normalize  } from './normalize'
+export { default as noteToFrequency  } from './noteToFrequency'
+export { default as noteToMidi  } from './noteToMidi'
+export { default as noteToObject  } from './noteToObject'
+export { default as objectToNote  } from './objectToNote'
+export { default as sharpToFlat  } from './sharpToFlat'
+export { default as transferAccidental  } from './transferAccidental'
+export { default as transferStyle  } from './transferStyle'
+export { default as transpose  } from './transpose'
