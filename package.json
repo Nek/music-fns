@@ -1,6 +1,6 @@
 {
   "name": "ts-music-fns",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "TypeScript music utility library that contains small music notation related functions. Forked from music-fns project.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nek/music-fns.git"
+    "url": "git+https://github.com/Nek/ts-music-fns.git"
   },
   "engines": {
     "node": ">=16"
@@ -31,9 +31,9 @@
   "author": "Nikita Dudnik aka Nek",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Nek/music-fns/issues"
+    "url": "https://github.com/Nek/ts-music-fns/issues"
   },
-  "homepage": "https://github.com/Nek/music-fns#readme",
+  "homepage": "https://github.com/Nek/ts-music-fns#readme",
   "devDependencies": {
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
