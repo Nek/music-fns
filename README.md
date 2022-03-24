@@ -1,6 +1,7 @@
 # music-fns [![npm version](https://badge.fury.io/js/music-fns.svg)](https://badge.fury.io/js/music-fns)
 
-music-fns is a JavaScript music utility library that contains small music notation related functions.
+music-fns-ts is a TypeScript music utility library that contains small music notation related functions.
+
 
 ## Installation
 
