@@ -1,18 +1,12 @@
-# music-fns [![npm version](https://badge.fury.io/js/music-fns.svg)](https://badge.fury.io/js/music-fns)
+# ts-music-fns [![npm version](https://badge.fury.io/js/music-fns.svg)](https://badge.fury.io/js/ts-music-fns)
 
-music-fns-ts is a TypeScript music utility library that contains small music notation related functions.
-
+ts-music-fns is a TypeScript music utility library that contains small music notation related functions.
+Forked from [music-fns](https://github.com/madewithlove/music-fns) project.
 
 ## Installation
 
 ```shell
-npm install music-fns
-```
-
-or
-
-```shell
-yarn add music-fns
+npm install ts-music-fns
 ```
 
 ## Usage
@@ -22,7 +16,7 @@ All methods are available as named exports.
 _example:_
 
 ```js
-import { noteToFrequency } from 'music-fns';
+import { noteToFrequency } from 'ts-music-fns';
 
 console.log(noteToFrequency('A4'));
 // > 440
@@ -32,7 +26,7 @@ console.log(noteToFrequency('A4'));
 
 This is an overview of all methods & constants.
 
-`music-fns` uses **scientific pitch notation**, you can use symbols (♭, ♯) or letters (b, #) as accidentals. The functions preserve your style (flat/sharp, letter/symbol).
+`ts-music-fns` uses **scientific pitch notation**, you can use symbols (♭, ♯) or letters (b, #) as accidentals. The functions preserve your style (flat/sharp, letter/symbol).
 
 Documentation is still WIP, PRs welcome.
 
@@ -45,7 +39,7 @@ Documentation is still WIP, PRs welcome.
 An nested array that contains a chromatic C scale with its possible note variations.
 
 ```js
-import { NOTES } from 'music-fns';
+import { NOTES } from 'ts-music-fns';
 
 console.log(NOTES);
 /* >
@@ -73,7 +67,7 @@ console.log(NOTES);
 Returns the root (only note, no accidental) from a note.
 
 ```js
-import { getRoot } from 'music-fns';
+import { getRoot } from 'ts-music-fns';
 
 console.log(getRoot('A#4'));
 // > 'A'
@@ -84,7 +78,7 @@ console.log(getRoot('A#4'));
 Returns the full note (note + accidental) from a note.
 
 ```js
-import { getNote } from 'music-fns';
+import { getNote } from 'ts-music-fns';
 
 console.log(getNote('A#4'));
 // > 'A#'
@@ -95,7 +89,7 @@ console.log(getNote('A#4'));
 Returns the octave information (or `undefined`) from a note.
 
 ```js
-import { getOctave } from 'music-fns';
+import { getOctave } from 'ts-music-fns';
 
 console.log(getOctave('A#4'));
 // > 4
@@ -109,7 +103,7 @@ console.log(getOctave('A#'));
 Returns the accidental (or `undefined`) from a note.
 
 ```js
-import { getAccidental } from 'music-fns';
+import { getAccidental } from 'ts-music-fns';
 
 console.log(getAccidental('A#4'));
 // > '#'
@@ -123,7 +117,7 @@ console.log(getAccidental('A4'));
 Returns `true` if the note has octave information.
 
 ```js
-import { hasOctave } from 'music-fns';
+import { hasOctave } from 'ts-music-fns';
 
 console.log(hasOctave('A♯4'));
 // > true
@@ -137,7 +131,7 @@ console.log(hasOctave('Db'));
 Returns `true` if the note has an accidental.
 
 ```js
-import { hasAccidental } from 'music-fns';
+import { hasAccidental } from 'ts-music-fns';
 
 console.log(hasAccidental('A♯4'));
 // > true
@@ -151,7 +145,7 @@ console.log(hasAccidental('D'));
 Returns `true` if the note has an accidental as a letter (b, #).
 
 ```js
-import { hasAccidentalLetter } from 'music-fns';
+import { hasAccidentalLetter } from 'ts-music-fns';
 
 console.log(hasAccidentalLetter('A#4'));
 // > true
@@ -165,7 +159,7 @@ console.log(hasAccidentalLetter('A♯4'));
 Returns `true` if the note has an accidental as a symbol (♭, ♯).
 
 ```js
-import { hasAccidentalSymbol } from 'music-fns';
+import { hasAccidentalSymbol } from 'ts-music-fns';
 
 console.log(hasAccidentalSymbol('A♯4'));
 // > true
@@ -179,7 +173,7 @@ console.log(hasAccidentalSymbol('A#4'));
 Returns `true` if the note is flat (b, ♭).
 
 ```js
-import { isFlat } from 'music-fns';
+import { isFlat } from 'ts-music-fns';
 
 console.log(isFlat('Gb3'));
 // > true
@@ -196,7 +190,7 @@ console.log(isFlat('F#3'));
 Returns `true` if the note is sharp (#, ♯).
 
 ```js
-import { isSharp } from 'music-fns';
+import { isSharp } from 'ts-music-fns';
 
 console.log(isSharp('F#3'));
 // > true
@@ -213,7 +207,7 @@ console.log(isSharp('Gb3'));
 Returns `true` if the note is natural (no accidental).
 
 ```js
-import { isNatural } from 'music-fns';
+import { isNatural } from 'ts-music-fns';
 
 console.log(isNatural('F3'));
 // > true
@@ -227,7 +221,7 @@ console.log(isNatural('Gb3'));
 Converts a flat to its sharp equivalent, this function preserves the accidental style (letter or symbol). If no flat is found the function returns the unmodified input.
 
 ```js
-import { flatToSharp } from 'music-fns';
+import { flatToSharp } from 'ts-music-fns';
 
 console.log(flatToSharp('Gb3'));
 // > 'F#3'
@@ -238,7 +232,7 @@ console.log(flatToSharp('Gb3'));
 Converts a sharp to its flat equivalent, this function preserves the accidental style (letter or symbol). If no sharp is found the function returns the unmodified input.
 
 ```js
-import { sharpToFlat } from 'music-fns';
+import { sharpToFlat } from 'ts-music-fns';
 
 console.log(sharpToFlat('F#3'));
 // > 'Gb3'
@@ -249,7 +243,7 @@ console.log(sharpToFlat('F#3'));
 Returns `true` if the provided notes are the same notes.
 
 ```js
-import { areEqual } from 'music-fns';
+import { areEqual } from 'ts-music-fns';
 
 // same notes in flat & sharp, symbol and letter
 console.log(areEqual(['F#3', 'Gb3', 'G♭3', 'F♯3']));
@@ -264,7 +258,7 @@ console.log(areEqual(['A3', 'F3']));
 Returns the (0-indexed) position of the specific root within a chromatic C scale (equals the `NOTES` constant).
 
 ```js
-import { getChromaticCPosition } from 'music-fns';
+import { getChromaticCPosition } from 'ts-music-fns';
 
 console.log(getChromaticCPosition('D3'));
 // > 2
@@ -278,7 +272,7 @@ console.log(getChromaticCPosition('G♯1'));
 Returns `true` if all notes share the same octave information.
 
 ```js
-import { haveSameOctave } from 'music-fns';
+import { haveSameOctave } from 'ts-music-fns';
 
 console.log(haveSameOctave(['A3', 'D3', 'G3']));
 // > true
@@ -292,7 +286,7 @@ console.log(haveSameOctave(['A#1', 'D3', 'G3']));
 Converts a note to a frequency (in Hz). You can use a different base frequency for A4 via `standard`.
 
 ```js
-import { noteToFrequency } from 'music-fns';
+import { noteToFrequency } from 'ts-music-fns';
 
 console.log(noteToFrequency('A4'));
 // > 440
@@ -309,7 +303,7 @@ console.log(noteToFrequency('A4', { standard: 442 }));
 Converts a note to its MIDI number. C4 = 60 in our implementation. You can provide a different middle C via `standard`.
 
 ```js
-import { noteToMidi } from 'music-fns';
+import { noteToMidi } from 'ts-music-fns';
 
 console.log(noteToMidi('C4'));
 // > 60
@@ -333,7 +327,7 @@ The object can contain the following keys:
 * **[octave]:** number
 
 ```js
-import { noteToObject } from 'music-fns';
+import { noteToObject } from 'ts-music-fns';
 
 console.log(noteToObject('A4'));
 /* > {
@@ -371,7 +365,7 @@ The object can contain following keys:
 * **[octave]:** number
 
 ```js
-import { objectToNote } from 'music-fns';
+import { objectToNote } from 'ts-music-fns';
 
 console.log(
   objectToNote({
@@ -399,7 +393,7 @@ console.log(
 Returns `true` if the provided value is a valid note in scientific pitch notation.
 
 ```js
-import { isNote } from 'music-fns';
+import { isNote } from 'ts-music-fns';
 
 console.log(isNote('A#5'));
 // > true;
@@ -413,7 +407,7 @@ console.log(isNote('Q2'));
 Converts a note which has an accidental as a symbol (♭, ♯) to a note with the accidental as a letter (b, #).
 
 ```js
-import { accidentalToLetter } from 'music-fns';
+import { accidentalToLetter } from 'ts-music-fns';
 
 console.log(accidentalToLetter('A♯4'));
 // > 'A#4'
@@ -424,7 +418,7 @@ console.log(accidentalToLetter('A♯4'));
 Converts a note which has an accidental as a letter (b, #) to a note with the accidental as a symbol (♭, ♯).
 
 ```js
-import { accidentalToSymbol } from 'music-fns';
+import { accidentalToSymbol } from 'ts-music-fns';
 
 console.log(accidentalToSymbol('A#4'));
 // > 'A♯4'
@@ -437,7 +431,7 @@ Transfer the accidental type (flat or sharp) from a provided reference note
 In this example, we've converted `F♯3` to `Gb3` because the reference note is `Bb4` (a flat instead of sharp).
 
 ```js
-import { transferAccidental } from 'music-fns';
+import { transferAccidental } from 'ts-music-fns';
 
 console.log(transferAccidental('F#3', 'Bb4'));
 // > 'Gb3';
@@ -451,7 +445,7 @@ Transfer the accidental notation style (letter or symbol) from the provided refe
 In this example, we've converted `F♯3` to `F♯3` because the reference note is `B♭4` (a symbol instead of a letter).
 
 ```js
-import { transferAccidentalStyle } from 'music-fns';
+import { transferAccidentalStyle } from 'ts-music-fns';
 
 console.log(transferAccidentalStyle('F#3', 'B♭4'));
 // > 'F♯3';
@@ -465,7 +459,7 @@ Combination of `transferAccidental` and `transferAccidentalStyle`.
 In this example, we've converted `F#3` to `G♭3` because the reference note is `B♭4` (a flat symbol instead of a sharp letter).
 
 ```js
-import { transferStyle } from 'music-fns';
+import { transferStyle } from 'ts-music-fns';
 
 console.log(transferStyle('F#3', 'B♭4'));
 // > 'G♭3';
@@ -524,7 +518,7 @@ augmented / diminished:
 * `(12)` **AUGMENTED_SEVENTH** / **A7**
 
 ```js
-import { Interval } from 'music-fns';
+import { Interval } from 'ts-music-fns';
 
 console.log(Interval.PERFECT_FOURTH);
 // > 5
@@ -549,7 +543,7 @@ console.log(Interval.OCTAVE);
 Transpose a note by a specific interval (use the `Interval` constant). An interval can also be negative.
 
 ```js
-import { transpose, Interval } from 'music-fns';
+import { transpose, Interval } from 'ts-music-fns';
 
 console.log(transpose('C♯3', Interval.MAJOR_SIXTH));
 // > 'A♯3'
@@ -563,7 +557,7 @@ console.log(transpose('C♯3', -Interval.O));
 Returns one or more intervals between the provided notes. You can pass `fromRoot` to calculate the interval from the first note (= root).
 
 ```js
-import { getIntervals } from 'music-fns';
+import { getIntervals } from 'ts-music-fns';
 
 console.log(getIntervals(['C♯3', 'A♯3']));
 // > [ 9 ]
@@ -582,7 +576,7 @@ console.log(getIntervals(['C♯3', 'A♯3', 'B3'], { fromRoot: true }));
 Returns `true` if the interval is a semitone `(1)`.
 
 ```js
-import { getIntervals, isSemitone } from 'music-fns';
+import { getIntervals, isSemitone } from 'ts-music-fns';
 
 console.log(isSemitone(getIntervals(['C♯3', 'D3'])[0]));
 // > true;
@@ -593,7 +587,7 @@ console.log(isSemitone(getIntervals(['C♯3', 'D3'])[0]));
 Returns `true` if the interval is a tone `(2)`.
 
 ```js
-import { getIntervals, isTone } from 'music-fns';
+import { getIntervals, isTone } from 'ts-music-fns';
 
 console.log(isTone(getIntervals(['C3', 'D3'])[0]));
 // > true;
@@ -604,7 +598,7 @@ console.log(isTone(getIntervals(['C3', 'D3'])[0]));
 Returns `true` if the interval is a third (diminished, minor, major or augmented) `(2, 3, 4, 5)`.
 
 ```js
-import { getIntervals, isThird } from 'music-fns';
+import { getIntervals, isThird } from 'ts-music-fns';
 
 console.log(isThird(getIntervals(['C4', 'E4'])[0]));
 // > true;
@@ -621,7 +615,7 @@ console.log(isThird(getIntervals(['C4', 'E#4'])[0]));
 Returns `true` if the interval is a fifth (diminished, perfect or augmented) `(6, 7, 8)`.
 
 ```js
-import { getIntervals, isFifth } from 'music-fns';
+import { getIntervals, isFifth } from 'ts-music-fns';
 
 console.log(isFifth(getIntervals(['C4', 'G4'])[0]));
 // > true;
@@ -638,7 +632,7 @@ console.log(isFifth(getIntervals(['C4', 'G#4'])[0]));
 Returns `true` if the interval is an octave `(12)`.
 
 ```js
-import { getIntervals, isOctave } from 'music-fns';
+import { getIntervals, isOctave } from 'ts-music-fns';
 
 console.log(isOctave(getIntervals(['C3', 'C4'])[0]));
 // > true;
@@ -681,7 +675,7 @@ An object containing scale constants (array of intervals).
 * **YO**: `[ 2, 3, 2, 2, 3 ]`
 
 ```js
-import { Scale } from 'music-fns';
+import { Scale } from 'ts-music-fns';
 
 console.log(Scale.ALGERIAN);
 // > [ 2, 1, 2, 1, 1, 1, 3, 1 ]
@@ -707,7 +701,7 @@ White keys on a piano from note -> note an octave up.
 * **LOCRIAN**: (B - B) `[ 1, 2, 2, 1, 2, 2, 2 ]`
 
 ```js
-import { Mode } from 'music-fns';
+import { Mode } from 'ts-music-fns';
 
 console.log(Mode.IONIAN);
 // > [ 2, 2, 1, 2, 2, 2, 1 ]
@@ -723,7 +717,7 @@ console.log(Mode.MIXOLYDIAN);
 Creates a scale (or mode) by providing a root note and an intervals (use the `Scale` or `Mode` constant). You can provide `includeRootEnd` to also include the root note transposed an octave up.
 
 ```js
-import { Scale, Mode, createScale } from 'music-fns';
+import { Scale, Mode, createScale } from 'ts-music-fns';
 
 console.log(createScale('C2', Scale.ARABIC));
 // > [ 'C2', 'C#2', 'E2', 'F2', 'G2', 'G#2', 'B2' ]
@@ -740,7 +734,7 @@ console.log(createScale('F2', Scale.BLUES, { includeRootEnd: true }));
 Returns `true` when the array of notes is a scale.
 
 ```js
-import { isScale } from 'music-fns';
+import { isScale } from 'ts-music-fns';
 
 console.log(isScale(['C2', 'C#2', 'E2', 'F2', 'G2', 'G#2', 'B2']));
 // > true
@@ -754,7 +748,7 @@ console.log(isScale(['C2', 'C#2', 'E4', 'F2', 'G2', 'G#2', 'C5']));
 Returns `true` when the provided array of notes is a mode (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian or Locrian).
 
 ```js
-import { isMode } from 'music-fns';
+import { isMode } from 'ts-music-fns';
 
 console.log(isMode(['G4', 'A4', 'B4', 'C5', 'D5', 'E5', 'F5']));
 // > true
@@ -768,7 +762,7 @@ console.log(isMode(['C2', 'C#2', 'E2', 'F2', 'G2', 'G#2', 'B2']));
 Returns `true` if the scale is ascending.
 
 ```js
-import { isAscending } from 'music-fns';
+import { isAscending } from 'ts-music-fns';
 
 console.log(isAscending(['C1', 'D1', 'E1', 'F1', 'G1', 'A1', 'B1', 'C2']));
 // > true
@@ -782,7 +776,7 @@ console.log(isAscending(['C2', 'B1', 'A1', 'G1', 'F1', 'E1', 'D1']));
 Returns `true` if the scale is descending.
 
 ```js
-import { isDescending } from 'music-fns';
+import { isDescending } from 'ts-music-fns';
 
 console.log(isDescending(['C2', 'B1', 'A1', 'G1', 'F1', 'E1', 'D1']));
 // > true
@@ -796,7 +790,7 @@ console.log(isDescending(['C1', 'D1', 'E1', 'F1', 'G1', 'A1', 'B1', 'C2']));
 Returns `true` if a scale has the provided interval amount.
 
 ```js
-import { hasIntervalAmount } from 'music-fns';
+import { hasIntervalAmount } from 'ts-music-fns';
 
 console.log(hasIntervalAmount(['C2', 'C#2', 'E2', 'F2', 'G2', 'G#2', 'B2'], 7));
 // > true
@@ -815,7 +809,7 @@ console.log(hasIntervalAmount(['C2', 'C#2', 'E2', 'F2', 'G2', 'G#2'], 7));
 Returns `true` if the scale is pentatonic (5 notes per octave).
 
 ```js
-import { isPentatonic } from 'music-fns';
+import { isPentatonic } from 'ts-music-fns';
 
 console.log(isPentatonic(['C', 'D', 'E', 'G', 'A']));
 // > true
@@ -832,7 +826,7 @@ console.log(isPentatonic(['C', 'D', 'E', 'G']));
 Returns `true` if the scale is hexatonic (6 notes per octave).
 
 ```js
-import { isHexatonic } from 'music-fns';
+import { isHexatonic } from 'ts-music-fns';
 
 console.log(isHexatonic(['C', 'D', 'E', 'F♯', 'G♯', 'A♯']));
 // > true
@@ -849,7 +843,7 @@ console.log(isHexatonic(['C', 'D', 'E', 'F♯', 'G♯']));
 Returns `true` if the scale is heptatonic (7 notes per octave).
 
 ```js
-import { isHeptatonic } from 'music-fns';
+import { isHeptatonic } from 'ts-music-fns';
 
 console.log(isHeptatonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > true
@@ -866,7 +860,7 @@ console.log(isHeptatonic(['C', 'D', 'E', 'F', 'G', 'A']));
 Returns `true` if the scale is octatonic (8 notes per octave).
 
 ```js
-import { isOctatonic } from 'music-fns';
+import { isOctatonic } from 'ts-music-fns';
 
 console.log(isOctatonic(['D', 'E', 'F', 'G', 'A♭', 'B♭', 'B', 'C♯']));
 // > true
@@ -883,7 +877,7 @@ console.log(isOctatonic(['D', 'E', 'F', 'G', 'A♭', 'B♭']));
 Returns `true` if the scale is diatonic (5 tones & 2 semitones, where the semitones are separated at least 2 steps from each other).
 
 ```js
-import { isDiatonic } from 'music-fns';
+import { isDiatonic } from 'ts-music-fns';
 
 console.log(isDiatonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > true
@@ -897,7 +891,7 @@ console.log(isDiatonic(['C', 'D', 'E', 'F#', 'G#', 'A#', 'B']));
 Returns `true` if the scale is hemitonic (contains 1 or more semitones).
 
 ```js
-import { isHemitonic } from 'music-fns';
+import { isHemitonic } from 'ts-music-fns';
 
 console.log(isHemitonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > true
@@ -911,7 +905,7 @@ console.log(isHemitonic(['C', 'D', 'E', 'F#', 'G#', 'A#']));
 Returns `true` if the scale is anhemitonic (does not contain semitones).
 
 ```js
-import { isAnhemitonic } from 'music-fns';
+import { isAnhemitonic } from 'ts-music-fns';
 
 console.log(isAnhemitonic(['C', 'D', 'E', 'F#', 'G#', 'A#']));
 // > true
@@ -925,7 +919,7 @@ console.log(isAnhemitonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns `true` if the scale is cohemitonic (contains 2 or more semitones that appear consecutively in scale order).
 
 ```js
-import { isCohemitonic } from 'music-fns';
+import { isCohemitonic } from 'ts-music-fns';
 
 // semitones between F# - G and G - Ab
 console.log(isCohemitonic(['C', 'D', 'Eb', 'F#', 'G', 'Ab', 'B', 'C']));
@@ -940,7 +934,7 @@ console.log(isCohemitonic(['C1', 'C#1', 'D#1', 'G1', 'G#1']));
 Returns the note on the provided scale degree.
 
 ```js
-import { getNoteOnDegree } from 'music-fns';
+import { getNoteOnDegree } from 'ts-music-fns';
 
 console.log(getNoteOnDegree(['C1', 'D1', 'E1', 'F1', 'G1', 'A1', 'B1'], 3));
 // > E1
@@ -954,7 +948,7 @@ console.log(getNoteOnDegree(['C', 'D', 'E', 'F', 'G', 'A', 'B'], 8));
 Returns the note on scale degree `1` in a diatonic scale.
 
 ```js
-import { getTonic } from 'music-fns';
+import { getTonic } from 'ts-music-fns';
 
 console.log(getTonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > C
@@ -965,7 +959,7 @@ console.log(getTonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `2` in a diatonic scale.
 
 ```js
-import { getSupertonic } from 'music-fns';
+import { getSupertonic } from 'ts-music-fns';
 
 console.log(getSupertonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > D
@@ -976,7 +970,7 @@ console.log(getSupertonic(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `3` in a diatonic scale.
 
 ```js
-import { getMediant } from 'music-fns';
+import { getMediant } from 'ts-music-fns';
 
 console.log(getMediant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > E
@@ -987,7 +981,7 @@ console.log(getMediant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `4` in a diatonic scale.
 
 ```js
-import { getSubdominant } from 'music-fns';
+import { getSubdominant } from 'ts-music-fns';
 
 console.log(getSubdominant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > F
@@ -998,7 +992,7 @@ console.log(getSubdominant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `5` in a diatonic scale.
 
 ```js
-import { getDominant } from 'music-fns';
+import { getDominant } from 'ts-music-fns';
 
 console.log(getDominant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > G
@@ -1009,7 +1003,7 @@ console.log(getDominant(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `6` in a diatonic scale.
 
 ```js
-import { getLeadingTone } from 'music-fns';
+import { getLeadingTone } from 'ts-music-fns';
 
 console.log(getLeadingTone(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > A
@@ -1020,7 +1014,7 @@ console.log(getLeadingTone(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Returns the note on scale degree `7` in a diatonic scale.
 
 ```js
-import { getLeadingTone } from 'music-fns';
+import { getLeadingTone } from 'ts-music-fns';
 
 console.log(getLeadingTone(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 // > B
@@ -1031,7 +1025,7 @@ console.log(getLeadingTone(['C', 'D', 'E', 'F', 'G', 'A', 'B']));
 Normalize a scale by making sure it's ascending & has a root end.
 
 ```js
-import { normalize } from 'music-fns';
+import { normalize } from 'ts-music-fns';
 
 console.log(normalize(['C2', 'G1', 'F1', 'E1', 'D1']));
 // > ['C1', 'D1', 'E1', 'F1', 'G1', 'C2']
@@ -1058,7 +1052,7 @@ An object containing chord constants (array of intervals from root, root include
 * **SEVENTH**: `[ 0, 4, 7, 10 ]`
 
 ```js
-import { Chord } from 'music-fns';
+import { Chord } from 'ts-music-fns';
 
 console.log(Chord.MAJOR);
 // > [ 0, 4, 7 ]
@@ -1074,7 +1068,7 @@ console.log(Chord.MINOR_MAJOR_SEVENTH);
 Creates a chord by providing a root note and intervals (use the `Chord` constant).
 
 ```js
-import { Chord, createChord } from 'music-fns';
+import { Chord, createChord } from 'ts-music-fns';
 
 console.log(createChord('C2', Chord.MAJOR));
 // > [ 'C2', 'E2', 'G2' ]
@@ -1088,7 +1082,7 @@ console.log(createChord('D#3', Chord.MAJOR_SEVENTH));
 Returns `true` if the chord is a triad (a set of three notes that can be stacked in thirds).
 
 ```js
-import { isTriad } from 'music-fns';
+import { isTriad } from 'ts-music-fns';
 
 console.log(isTriad(['F2', 'A2', 'C3']));
 // > true
@@ -1106,7 +1100,7 @@ console.log(isTriad(['F2', 'A2', 'C3', 'D4']));
 Creates a melody using a provided array of notes and a pattern.
 
 ```js
-import { Chord, createMelody } from 'music-fns';
+import { Chord, createMelody } from 'ts-music-fns';
 
 console.log(createMelody(createScale('C2', Scale.MAJOR), [0, 2, 0, 1, 0, 3]));
 // > [ 'C2', 'E2', 'C2', 'D2', 'C2', 'F2' ]
