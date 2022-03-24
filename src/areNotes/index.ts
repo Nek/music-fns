@@ -1,20 +1,19 @@
-
-import hasOctave from '../hasOctave';
-import isNote from '../isNote';
-import type { ScientificNotes } from '../types';
+import hasOctave from '../hasOctave'
+import isNote from '../isNote'
+import type { ScientificNotes } from '../types'
 
 const areNotes = (notes: ScientificNotes) => {
-  if (!Array.isArray(notes)) return false;
+  if (!Array.isArray(notes)) return false
 
   try {
     const isValid =
-      notes.filter(n => hasOctave(n)).length === notes.length ||
-      notes.filter(n => !hasOctave(n)).length === notes.length;
+      notes.filter((n) => hasOctave(n)).length === notes.length ||
+      notes.filter((n) => !hasOctave(n)).length === notes.length
 
-    return notes.every(n => isNote(n)) && isValid;
+    return notes.every((n) => isNote(n)) && isValid
   } catch (e) {
-    return false;
+    return false
   }
-};
+}
 
-export default areNotes;
+export default areNotes

@@ -2,6 +2,6 @@
 
 // E, F, G, A, B, C, D, E
 
-import { T, S } from '../Interval/Short';
+import { T, S } from '../Interval/Short'
 
-export default [S, T, T, T, S, T, T];
+export default [S, T, T, T, S, T, T]

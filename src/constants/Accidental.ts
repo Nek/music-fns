@@ -1,14 +1,14 @@
-export const FLAT_SYMBOL = '♭';
-export const FLAT_LETTER = 'b';
+export const FLAT_SYMBOL = '♭'
+export const FLAT_LETTER = 'b'
 
-export const SHARP_SYMBOL = '♯';
-export const SHARP_LETTER = '#';
+export const SHARP_SYMBOL = '♯'
+export const SHARP_LETTER = '#'
 
-export const LETTER = 'LETTER';
-export const SYMBOL = 'SYMBOL';
+export const LETTER = 'LETTER'
+export const SYMBOL = 'SYMBOL'
 
-export const SHARP = 'SHARP';
-export const FLAT = 'FLAT';
+export const SHARP = 'SHARP'
+export const FLAT = 'FLAT'
 
 export default {
   FLAT_SYMBOL,
@@ -20,5 +20,5 @@ export default {
   FLAT,
   SHARP,
   LETTER,
-  SYMBOL
-};
+  SYMBOL,
+}

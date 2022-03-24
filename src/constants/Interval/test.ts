@@ -1,7 +1,7 @@
-import AugmentedDiminished from './AugmentedDiminished';
-import MinorMajor from './MinorMajor';
-import Short from './Short';
-import Names from './Names';
+import AugmentedDiminished from './AugmentedDiminished'
+import MinorMajor from './MinorMajor'
+import Short from './Short'
+import Names from './Names'
 
 describe('should return correct intervals for Short naming', () => {
   const data = {
@@ -9,13 +9,13 @@ describe('should return correct intervals for Short naming', () => {
     S: 1,
     T: 2,
     TT: 6,
-    O: 12
-  };
+    O: 12,
+  }
 
   it(`should contain correct interval data`, () => {
-    expect(Short).toEqual(data);
-  });
-});
+    expect(Short).toEqual(data)
+  })
+})
 
 describe('should return correct intervals for normal naming', () => {
   const data = {
@@ -23,13 +23,13 @@ describe('should return correct intervals for normal naming', () => {
     SEMITONE: 1,
     TONE: 2,
     TRITONE: 6,
-    OCTAVE: 12
-  };
+    OCTAVE: 12,
+  }
 
   it(`should contain correct interval data`, () => {
-    expect(Names).toEqual(data);
-  });
-});
+    expect(Names).toEqual(data)
+  })
+})
 
 describe('should return correct intervals for Augmented and Diminished', () => {
   const data = {
@@ -61,13 +61,13 @@ describe('should return correct intervals for Augmented and Diminished', () => {
     DIMINISHED_EIGHTH: 11,
     d8: 11,
     AUGMENTED_SEVENTH: 12,
-    A7: 12
-  };
+    A7: 12,
+  }
 
   it(`should contain correct interval data`, () => {
-    expect(AugmentedDiminished).toEqual(data);
-  });
-});
+    expect(AugmentedDiminished).toEqual(data)
+  })
+})
 
 describe('should return correct intervals for Minor and Major', () => {
   const data = {
@@ -94,10 +94,10 @@ describe('should return correct intervals for Minor and Major', () => {
     MAJOR_SEVENTH: 11,
     M7: 11,
     PERFECT_OCTAVE: 12,
-    P8: 12
-  };
+    P8: 12,
+  }
 
   it(`should contain correct interval data`, () => {
-    expect(MinorMajor).toEqual(data);
-  });
-});
+    expect(MinorMajor).toEqual(data)
+  })
+})

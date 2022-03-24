@@ -1,15 +1,15 @@
-import isTone from './';
+import isTone from './'
 
 describe('isTone', () => {
   it('should return true when interval is tone', () => {
-    expect(isTone(2)).toBe(true);
-  });
+    expect(isTone(2)).toBe(true)
+  })
 
   it('should return false when interval is not tone', () => {
-    expect(isTone(1)).toBe(false);
-  });
+    expect(isTone(1)).toBe(false)
+  })
 
   it('should return false when interval is not tone', () => {
-    expect(isTone(7)).toBe(false);
-  });
-});
+    expect(isTone(7)).toBe(false)
+  })
+})

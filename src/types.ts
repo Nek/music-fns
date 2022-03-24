@@ -4,15 +4,13 @@ export type AccidentalType = 'LETTER' | 'SYMBOL' | ''
 export type Octave = number
 
 export type NoteObject = {
-  root: Note,
-  accidental?: Accidental,
-  accidentalType?: AccidentalType,
+  root: Note
+  accidental?: Accidental
+  accidentalType?: AccidentalType
   octave?: Octave
 }
 
 export type Direction = 1 | -1
-
-
 
 export type ScientificNote = string
 export type Interval = number

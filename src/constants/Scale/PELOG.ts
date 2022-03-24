@@ -1,5 +1,5 @@
 // https://en.wikipedia.org/wiki/Pelog
 
-import BALINESE from './BALINESE';
+import BALINESE from './BALINESE'
 
-export default [...BALINESE];
+export default [...BALINESE]

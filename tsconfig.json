@@ -3,7 +3,6 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
     "importsNotUsedAsValues": "error",

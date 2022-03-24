@@ -1,25 +1,27 @@
-
 // should transfer flat or sharp style preference (sharp / flat - symbol / letter)
 // if reference has no accidental it should mirror it's input style
 
-import transferAccidentalStyle from '../transferAccidentalStyle';
-import transferAccidental from '../transferAccidental';
-import isNote from '../isNote';
-import type { ScientificNote } from '../types';
+import transferAccidentalStyle from '../transferAccidentalStyle'
+import transferAccidental from '../transferAccidental'
+import isNote from '../isNote'
+import type { ScientificNote } from '../types'
 
-const transferStyle = (note: ScientificNote, referenceNote: ScientificNote): ScientificNote => {
+const transferStyle = (
+  note: ScientificNote,
+  referenceNote: ScientificNote,
+): ScientificNote => {
   if (!isNote(referenceNote)) {
-    throw new Error(`"${referenceNote}" is not a valid reference note.`);
+    throw new Error(`"${referenceNote}" is not a valid reference note.`)
   }
 
   if (!isNote(note)) {
-    throw new Error(`"${note}" is not a valid note.`);
+    throw new Error(`"${note}" is not a valid note.`)
   }
 
   return transferAccidental(
     transferAccidentalStyle(note, referenceNote),
-    referenceNote
-  );
-};
+    referenceNote,
+  )
+}
 
-export default transferStyle;
+export default transferStyle

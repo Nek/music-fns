@@ -1,22 +1,21 @@
-
-import getChromaticCPosition from '../getChromaticCPosition';
-import getOctave from '../getOctave';
-import areNotes from '../areNotes';
-import type { ScientificNotes } from 'src/types';
+import getChromaticCPosition from '../getChromaticCPosition'
+import getOctave from '../getOctave'
+import areNotes from '../areNotes'
+import type { ScientificNotes } from 'src/types'
 
 const areEqual = (notes: ScientificNotes) => {
   if (!areNotes(notes)) {
-    return false;
+    return false
   }
 
   try {
     return (
       notes.map(getChromaticCPosition).every((v, _, arr) => v === arr[0]) &&
       notes.map(getOctave).every((v, _, arr) => v === arr[0])
-    );
+    )
   } catch (e) {
-    return false;
+    return false
   }
-};
+}
 
-export default areEqual;
+export default areEqual
