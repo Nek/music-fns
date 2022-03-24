@@ -1,29 +1,22 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "target": "es2017",
-
+      "target": "ES6",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "declaration": true,
       "strict": true,
       "noFallthroughCasesInSwitch": true,
       "experimentalDecorators": true,
       "noUnusedLocals": true,
-
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "outDir": "dist",
       "baseUrl": ".",
-      "lib": [
-        "DOM",
-        "DOM.Iterable",
-        "ES5",
-        "ES2015",
-        "ES2016",
-        "ES2017",
-        "ESNext.bigint"
-      ],
-      "declaration": true
   },
   "include": [
       "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
